@@ -37,7 +37,7 @@ h1, h2{
   direction: ltr;
   padding-right:25px;
   float:right;
-  
+
   text-align: right;
   padding-top:10px;
 }
@@ -83,4 +83,18 @@ h1, h2{
 /* Projects */
 #projects{
   background: rgb(63,76,112);
+}
+
+#projects  h2{
+  font-size:40px;
+  color: white;
+  text-decoration: underline;
+  padding-top:100px;
+}
+
+.projects-grid{
+  display: grid;
+  width:100%;
+  grid-template-columns: 300px 300px;
+  grid-gap: 100px 100px;
 }
