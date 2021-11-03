@@ -83,6 +83,7 @@ h1, h2{
 /* Projects */
 #projects{
   background: rgb(63,76,112);
+  width:100%;
 }
 
 #projects  h2{
@@ -93,8 +94,19 @@ h1, h2{
 }
 
 .projects-grid{
+  width:700px;
+
   display: grid;
-  width:100%;
   grid-template-columns: 300px 300px;
   grid-gap: 100px 100px;
+  margin:8% 37%;
+}
+
+#grid-items {
+  width:400px;
+}
+
+#grid-items #project-img img{
+  width:100px;
+
 }
