@@ -39,11 +39,8 @@ a{
 
 #navbar li{
   display: inline-block;
-  direction: ltr;
   padding-right:25px;
   float:right;
-
-  text-align: right;
   padding-top:10px;
 }
 
@@ -113,6 +110,7 @@ a{
   height: auto;
   margin-bottom: 0;
   padding-bottom: 0;
+  display: block;
 }
 
 .grid-items p{
@@ -146,24 +144,25 @@ a{
   .link-button{
     display:flex;
     flex-direction:column;
-    margin-top:130px;
+    margin-top:120px;
     align-items: center;
   }
 
   .link-button button{
-    width:170px;
+    width:150px;
     padding: 10px;
     background-color: rgb(44,49,57);
     color:white;
-    font:20px/1.4 'Poppins', sans-serif;
+    font:18px/1.4 'Poppins', sans-serif;
     border:0;
     cursor: pointer;
   }
 
 .link-button button:hover{
-
+  animation-name: hover-button;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
 }
-
 
 /* Animation */
 @keyframes hover-title {
@@ -175,5 +174,83 @@ a{
 }
 
 @keyframes hover-button {
+  100%{
+    background: rgb(190,84,71);
+  }
+}
 
+/* Contacts */
+#contacts{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contacts h2{
+  top:50%;
+  text-align:center;
+  color: white;
+  font-size:60px;
+  padding-bottom: 10px;
+}
+
+#contacts p{
+  font:15px/1.4 'Poppins', sans-serif;
+  color: white;
+  margin-top:0;
+  font-style: italic;
+}
+
+ #contacts ul{
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction: column;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+ #contacts ul #contacts li{
+  list-style-type:none;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+#contacts ul #contacts li #contacts a{
+  display:block;
+  width:60px;
+  height:60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size:30px;
+  color:#666;
+  transition: .5s;
+}
+
+#contacts ul #contacts li #contacts a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+#contacts ul #contacts li #contacts a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+#contacts  ul #contacts li #contacts a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
 }
