@@ -89,7 +89,7 @@ a{
   width:100%;
 }
 
-#projects  h2{
+#projects h2{
   font-size:40px;
   color: white;
   text-decoration: underline;
@@ -124,11 +124,6 @@ a{
   margin-top:0;
 }
 
-  a.project-tile{
-    padding:0;
-    margin:0;
-    height: 0;
-  }
 
   .grid-items a:hover .hidden-hover{
     animation-name: hover-title;
@@ -144,7 +139,7 @@ a{
   .link-button{
     display:flex;
     flex-direction:column;
-    margin-top:120px;
+    margin-top:6%;
     align-items: center;
   }
 
@@ -257,4 +252,73 @@ footer p{
 footer a{
   color: rgb(190,84,71);
   font:20px/1.4 'Poppins', sans-serif;
+}
+
+/* Media Queries */
+
+@media(max-width:768px) {
+  #navbar,
+  .projects-grid,
+  #contacts ul{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  #welcome-section h1{
+    margin-top:50%;
+  }
+
+  #projects h2{
+    font-size: 30px;
+  }
+
+  #projects{
+    height: 200vh;
+  }
+
+  .projects-grid{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding-left:150px;
+  }
+
+  .project-img{
+    width:50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid-items p{
+    width:50%;
+    margin-bottom:4%;
+  }
+
+  #contacts h2{
+    font-size:40px;
+  }
+
+  #contacts ul{
+    justify-content: center;
+    align-items: center;
+    text-align:  center;
+  }
+
+  #contacts li{
+    padding-right:2px;
+  }
+
+  .fab, .far{
+    font-size:40px;
+}
+
+footer{
+  height: 25px;
+}
+
+  footer p{
+      font-size:15px;
+  }
 }
