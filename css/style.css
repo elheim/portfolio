@@ -5,6 +5,11 @@
   font:18px/1.4 'Poppins' sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
 body{
   font:18px/1.4 'Poppins' sans-serif;
   background-color: #000;
@@ -320,5 +325,25 @@ footer{
 
   footer p{
       font-size:15px;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
   }
 }
